@@ -1,0 +1,15 @@
+<div>
+  @if (!isChange()) {
+  <app-login></app-login>
+  } @else {
+  <app-register></app-register>
+  }
+
+  <button
+    class="buttonChange"
+    type="button"
+    (click)="isChange.set(!isChange())"
+  >
+    {{ isChange() ? "Увійти" : "Зареєструватись" }}
+  </button>
+</div>

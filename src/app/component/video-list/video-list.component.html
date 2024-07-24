@@ -1,0 +1,19 @@
+<div class="card-container">
+  <div class="add">
+    <button type="button" (click)="isShowAddModal()">Add</button>
+  </div>
+
+  <div class="cart-container">
+    @for (video of videos; track video._id) {
+    <app-video-item [video]="video" />
+    }
+  </div>
+</div>
+@if(isShowModal()) {
+<div class="backdrop">
+  <div class="backdrop-modal">
+    <button (click)="isShowAddModal()" class="button">X</button>
+    <app-add />
+  </div>
+</div>
+}

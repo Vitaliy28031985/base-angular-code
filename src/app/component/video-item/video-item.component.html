@@ -1,0 +1,23 @@
+@if(video) {
+<div class="video-container">
+  <iframe
+    class="video"
+    src="https://www.youtube.com/embed/BVIffUyYlUk?si=N5uqSBAEy60lHErk"
+    [title]="video.title"
+    frameborder="0"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+    referrerpolicy="strict-origin-when-cross-origin"
+    allowfullscreen
+  >
+  </iframe>
+  <div>
+    <h2 class="video-title">
+      {{ video.title }}
+    </h2>
+    <p class="video-description">
+      {{ video.description }}
+    </p>
+  </div>
+  <button type="button" (click)="delete(video._id)">Delete</button>
+</div>
+}

@@ -1,0 +1,11 @@
+@import "fonts";
+
+:root {
+    --main-background: #000000;
+    --text-color: #fff;
+}
+
+body {
+    background: var(--main-background);
+    color: var(--text-color);
+}
